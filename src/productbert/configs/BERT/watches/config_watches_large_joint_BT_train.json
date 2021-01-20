@@ -1,0 +1,30 @@
+{
+    "name": "BT-JointBERT-FT-watches-large-train",
+    "n_gpu": 1,
+
+    "arch": {
+        "type": "JointBertModelLogit",
+        "args": {
+            "num_classes_multi": 617
+        }
+    },
+    "data_loader": {
+        "type": "BertDataLoaderJoint",
+        "args":{
+            "data_dir": "data/",
+            "file": "../../data/processed/wdc-lspc/bert/preprocessed_watches_train_large_bert_cutBT_titleonly.pkl.gz",
+            "batch_size": 128,
+            "shuffle": false,
+            "validation_split": 0.0,
+            "num_workers": 8,
+            "max_length": 512,
+            "mlm": false
+        }
+    },
+    "loss": "BCEWithLogitsLoss",
+    "pos_neg_ratio": 4,
+    "metrics": [
+        "accuracy","accuracy_multi1","accuracy_multi2","tp","fp","tn","fn","tp_multibin","fp_multibin","tn_multibin","fn_multibin"
+    ],
+    "save_predictions": true
+}

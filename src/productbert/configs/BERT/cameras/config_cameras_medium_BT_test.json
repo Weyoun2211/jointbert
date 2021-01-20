@@ -1,0 +1,28 @@
+{
+    "name": "BT-BERT-FT-cameras-medium-test",
+    "n_gpu": 1,
+
+    "arch": {
+        "type": "BertModelLogit",
+        "args": {}
+    },
+    "data_loader": {
+        "type": "BertDataLoader",
+        "args":{
+            "data_dir": "data/",
+            "file": "../../data/processed/wdc-lspc/bert/preprocessed_cameras_gs_bert_cutBT_titleonly.pkl.gz",
+            "batch_size": 128,
+            "shuffle": false,
+            "validation_split": 0.0,
+            "num_workers": 8,
+            "max_length": 512,
+            "mlm": false
+        }
+    },
+    "loss": "BCEWithLogitsLoss",
+    "pos_neg_ratio": 4,
+    "metrics": [
+        "accuracy","tp","fp","tn","fn"
+    ],
+    "save_predictions": true
+}
