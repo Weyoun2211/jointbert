@@ -33,7 +33,7 @@ This repository will contain the code and data download links to reproduce the e
     4. *src/processing/process-magellan/process_to_magellan.py*
     5. *src/processing/process-wordcooc/process-to-wordcooc.py*
     
-    optional: prepar data for Ditto input: *src/processing/process-ditto/process_to_ditto.py*
+    optional: prepare data for Ditto input: *src/processing/process-ditto/process_to_ditto.py*
     
 * **Running the baseline experiments**
 
@@ -52,7 +52,7 @@ This repository will contain the code and data download links to reproduce the e
     Navigate to *src/productbert/*
     This project is based on a <a target="_blank" href="https://github.com/victoresque/pytorch-template/">PyTorch template project</a> It is suggested to read the respective github readme to understand how to train models and possible input commands.
     * **Fine-Tuning**:
-    The folder *src/productbert* contains bash scripts to run all of the experiments including the learning rate sweeps. Run any of the bash scripts titled *train_\*.sh* and append the id of the gpu you want to use, e.g. ```bash train_computers_small.sh 0```
+    The folder *src/productbert* contains bash scripts to run all of the experiments including the learning rate sweeps. Run any of the bash scripts titled *train_\*.sh* and append the id of the gpu you want to use, e.g. ```bash train_computers_bert.sh 0```
 
     * **Evaluating a trained model on a test set**:
     This is done by providing a config containing configuration parameters for the test run. Additionally you need to provide the checkpoint that should be used for testing. An example would be ```python test.py --device 0 -c configs/BERT/config_computers_small_test.json --resume saved/models/pathto/model/model_best.pth```
@@ -67,7 +67,7 @@ This repository will contain the code and data download links to reproduce the e
 
 * **Ditto**
 
-    The code for the Ditto framework can be found [here](https://github.com/megagonlabs/ditto)
+    The code for the Ditto framework can be found [here](https://github.com/megagonlabs/ditto).
 --------
 
 Project based on the [cookiecutter data science project template](https://drivendata.github.io/cookiecutter-data-science/). #cookiecutterdatascience
