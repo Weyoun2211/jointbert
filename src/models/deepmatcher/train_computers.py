@@ -27,7 +27,6 @@ for feature_combination in feature_combinations:
                     test_set = '../../../data/processed/wdc-lspc/magellan/learning-curve/formatted/preprocessed_computers_gs_magellan_pairs_formatted.csv'
                     pred_set = [
                         '../../../data/processed/wdc-lspc/magellan/learning-curve/formatted/preprocessed_computers_gs_magellan_pairs_formatted.csv',
-                        '../../../data/processed/wdc-lspc/magellan/learning-curve/formatted/preprocessed_computers_new_testset_500_magellan_pairs_formatted.csv',
                     '../../../data/processed/wdc-lspc/magellan/learning-curve/formatted/preprocessed_computers_new_testset_1500_magellan_pairs_formatted.csv']
 
                     experiment_name = 'wdc-lspc'
